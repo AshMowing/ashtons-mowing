@@ -2,40 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashton's Mowing and Gardening</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Ashton's Mowing and Gardening</h1>
-    <p>Your local lawn and garden expert</p>
-    <a href="#contact" class="cta-button">Get a Free Quote</a>
+    <div class="container">
+      <h1>Ashton's Mowing and Gardening</h1>
+      <p>Reliable Lawn & Garden Care in Your Neighborhood</p>
+      <a href="#appointment" class="btn">Book an Appointment</a>
+    </div>
   </header>
 
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <section id="about">
-    <h2>About Ashton</h2>
-    <p>Professional lawn mowing and gardening services with care and precision. Servicing your area with pride and attention to detail.</p>
+    <div class="container">
+      <h2>About Ashton</h2>
+      <p>Hi, I'm Ashton. I provide professional, affordable mowing and gardening services. Whether it's a one-time job or regular maintenance, I deliver reliable, quality service every time.</p>
+    </div>
   </section>
 
   <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Lawn Mowing</li>
-      <li>Hedge Trimming</li>
-      <li>Garden Maintenance</li>
-      <li>Clean-ups</li>
-    </ul>
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Lawn Mowing</li>
+        <li>Hedge Trimming</li>
+        <li>Weed Removal</li>
+        <li>Garden Maintenance</li>
+        <li>Seasonal Clean-ups</li>
+        <li>Green Waste Removal</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <h2>Pricing</h2>
+      <ul>
+        <li><strong>Basic Lawn Mowing:</strong> $30 - $50 per visit</li>
+        <li><strong>Full Lawn & Garden Service:</strong> $60 - $100 per visit</li>
+        <li><strong>Hedge Trimming:</strong> $25 - $60 depending on size</li>
+        <li><strong>Clean-up Services:</strong> Starting at $80</li>
+      </ul>
+      <p>Prices may vary based on property size and condition. Ask for a free quote!</p>
+    </div>
+  </section>
+
+  <section id="appointment">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <form action="mailto:ashtonsmowing304@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="Phone" required>
+
+        <label for="service">Service Requested</label>
+        <select id="service" name="Service">
+          <option>Lawn Mowing</option>
+          <option>Hedge Trimming</option>
+          <option>Clean-up</option>
+          <option>Full Service</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="Date">
+
+        <label for="message">Additional Notes</label>
+        <textarea id="message" name="Message"></textarea>
+
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+      <p><em>*You will be contacted to confirm your appointment.</em></p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Phone: <a href="tel:YOUR_PHONE">YOUR_PHONE</a></p>
-    <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>📞 <a href="tel:3044799048">304-479-9048</a></p>
+      <p>📧 <a href="mailto:ashtonsmowing304@gmail.com">ashtonsmowing304@gmail.com</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ashton's Mowing and Gardening</p>
+    <div class="container">
+      <p>&copy; 2025 Ashton's Mowing and Gardening</p>
+    </div>
   </footer>
 </body>
 </html>
