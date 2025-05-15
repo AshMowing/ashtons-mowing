@@ -1,26 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashton's Mowing and Gardening</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Styles -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    /* Lawn Background Header */
+    header {
+      background: url('https://images.unsplash.com/photo-1591951425328-48c1c2144a9b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+    .btn, .btn-outline {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .btn {
+      background: #4CAF50;
+      color: white;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    .btn-outline {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: #4CAF50;
+    }
+    nav {
+      background: #333;
+    }
+    nav .container {
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #555;
+    }
+    section {
+      background: white;
+      margin: 20px 0;
+      padding: 40px 0;
+    }
+    section h2 {
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+    section ul {
+      padding-left: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, select, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px;
+      font-size: 1em;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    @media (max-width: 600px) {
+      nav .container {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-  <div class="container">
-    <h1>Ashton's Mowing and Gardening</h1>
-    <p>Reliable Lawn & Garden Care in Your Neighborhood</p>
-    <a href="#appointment" class="btn scroll-btn">Book an Appointment</a>
-    <a href="#pricing" class="btn-outline scroll-btn">View Pricing</a>
-  </div>
-</header>
+    <div class="container">
+      <h1>Ashton's Mowing and Gardening</h1>
+      <p>Reliable Lawn & Garden Care in Your Neighborhood</p>
+      <a href="#appointment" class="btn">Book an Appointment</a>
+      <a href="#pricing" class="btn-outline">View Pricing</a>
+    </div>
+  </header>
 
   <nav>
     <div class="container">
@@ -43,10 +167,11 @@
       <h2>Our Services</h2>
       <ul>
         <li>Lawn Mowing</li>
-        <li>Mulching</li>
-        <li>Rock Cleaning</li>
-        <li>Leaf Removal</li>
-        <li>Cleanup Work</li>
+        <li>Hedge Trimming</li>
+        <li>Weed Removal</li>
+        <li>Garden Maintenance</li>
+        <li>Seasonal Clean-ups</li>
+        <li>Green Waste Removal</li>
       </ul>
     </div>
   </section>
@@ -55,10 +180,10 @@
     <div class="container">
       <h2>Pricing</h2>
       <ul>
-        <li><strong>Basic Lawn Mowing:</strong> $25 - $50 per hour</li>
-        <li><strong>Full Lawn & Garden Service:</strong> $45 - $100 per hour</li>
-        <li><strong>Mulching or Rock cleaning:</strong> $25 - $60 per hour, depending on size</li>
-        <li><strong>Clean-up Services:</strong> Starting at $20 per hour</li>
+        <li><strong>Basic Lawn Mowing:</strong> $30 - $50 per visit</li>
+        <li><strong>Full Lawn & Garden Service:</strong> $60 - $100 per visit</li>
+        <li><strong>Hedge Trimming:</strong> $25 - $60 depending on size</li>
+        <li><strong>Clean-up Services:</strong> Starting at $80</li>
       </ul>
       <p>Prices may vary based on property size and condition. Ask for a free quote!</p>
     </div>
@@ -77,10 +202,9 @@
         <label for="service">Service Requested</label>
         <select id="service" name="Service">
           <option>Lawn Mowing</option>
-          <option>Mulching</option>
-          <option>Rock Cleaning</option>
-          <option>Leaf Removal</option>
-          <option>Cleanup Work</option>
+          <option>Hedge Trimming</option>
+          <option>Clean-up</option>
+          <option>Full Service</option>
         </select>
 
         <label for="date">Preferred Date</label>
@@ -89,7 +213,7 @@
         <label for="message">Additional Notes</label>
         <textarea id="message" name="Message"></textarea>
 
-        <button type="submit" class="btn">Submit Request</button>
+        <button type="submit">Submit Request</button>
       </form>
       <p><em>*You will be contacted to confirm your appointment.</em></p>
     </div>
