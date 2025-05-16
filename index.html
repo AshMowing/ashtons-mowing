@@ -26,7 +26,6 @@
       margin: auto;
       padding: 20px;
     }
-    /* Lawn Background Header */
     header {
       background: url('https://images.unsplash.com/photo-1591951425328-48c1c2144a9b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
@@ -96,29 +95,6 @@
     section ul {
       padding-left: 20px;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, select, textarea {
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 12px;
-      font-size: 1em;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #45a049;
-    }
     footer {
       background: #333;
       color: white;
@@ -158,7 +134,7 @@
   <section id="about">
     <div class="container">
       <h2>About Ashton</h2>
-      <p>Hi, I'm Ashton, a student at Weir Highschool, I strive to provide professional, affordable mowing and gardening services. Whether it's a one-time job or regular maintenance, I deliver reliable, quality service every time.</p>
+      <p>Hi, I'm Ashton, a student at Weir Highschool. I strive to provide professional, affordable mowing and gardening services. Whether it's a one-time job or regular maintenance, I deliver reliable, quality service every time.</p>
     </div>
   </section>
 
@@ -180,7 +156,7 @@
       <h2>Pricing</h2>
       <ul>
         <li><strong>Basic Lawn Mowing:</strong> $25 - $50 per hour</li>
-        <li><strong>Leaf Removal:</strong> $20  per hour</li>
+        <li><strong>Leaf Removal:</strong> $20 per hour</li>
         <li><strong>Mulching and Rock Cleaning:</strong> $25 - $60 per hour, depending on size</li>
         <li><strong>Clean-up Services:</strong> Starting at $15 per hour</li>
       </ul>
@@ -191,29 +167,18 @@
   <section id="appointment">
     <div class="container">
       <h2>Book an Appointment</h2>
-      <form action="mailto:ashtonsmowing304@gmail.com" method="POST" enctype="text/plain">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="Name" required>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="Phone" required>
+      <!-- Embedded Google Form -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLScIpwr7AWiXEzSFiBAuaxqEHmjoykmXxkf5cHdaw9XtjK3T2Q/viewform?embedded=true" 
+        width="100%" 
+        height="1351" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Loading…
+      </iframe>
 
-        <label for="service">Service Requested</label>
-        <select id="service" name="Service">
-          <option>Lawn Mowing</option>
-          <option>Mulching OR Rock Cleaning</option>
-          <option>Clean-up Work</option>
-          <option>Leaf Removal</option>
-        </select>
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="Date">
-
-        <label for="message">Address and Additional Notes</label>
-        <textarea id="message" name="Message"></textarea>
-
-        <button type="submit">Submit Request</button>
-      </form>
       <p><em>*You will be contacted to confirm your appointment.</em></p>
     </div>
   </section>
